@@ -1,6 +1,6 @@
 # How to prepare your XBAND modem for serial connection
 
-1. **! Carefully !** lift pin 18 (TXD) and pin 29 (RXD) on the rockwell modem IC and connect wires to the lifted pins. They are needed to restore modem functionality.
+1. **! Carefully !** lift pin 18 (TXD) and pin 29 (RXD) on the Rockwell modem IC and connect wires to the lifted pins. They are needed to restore modem functionality.
 
     ![fs_001](https://user-images.githubusercontent.com/37120278/200299754-c1e4fe74-9bf8-4724-8336-9760c4eb45da.png)
 
@@ -20,7 +20,7 @@
 
     ![image](https://user-images.githubusercontent.com/37120278/200310006-239061cd-ba35-40f2-a647-91ad43045cb9.png)
 
-6. Replace the ROM with a flash ROM which contains the FredSerial firmware. You can use [xband_sak](https://github.com/g0-07/xband_sak) to flash a AM29F400BB/BT.
+6. Replace the ROM with a flash ROM which contains the FredSerial firmware. Or you can use [xband_sak](https://github.com/g0-07/xband_sak) to flash AM29F400BB/BT.
 
 7. Fix everything, for example with hot glue.
 
