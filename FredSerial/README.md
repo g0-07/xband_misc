@@ -20,7 +20,7 @@
 
     ![image](https://user-images.githubusercontent.com/37120278/200310006-239061cd-ba35-40f2-a647-91ad43045cb9.png)
 
-6. Replace the ROM with a flash ROM which contains the FredSerial firmware. Or you can use [xband_sak](https://github.com/g0-07/xband_sak) to flash AM29F400BB/BT.
+6. Replace the ROM with a flash ROM which contains the FredSerial firmware. Or you can use [xband_sak](https://github.com/g0-07/xband_sak) to flash AM29F400BB/BT with the use of an Everdrive. Don't forget the two missing 10kΩ SMD resistors!
 
 7. Fix everything, for example with hot glue.
 
