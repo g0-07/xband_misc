@@ -1,6 +1,6 @@
 # How to prepare your XBAND modem for serial-only connection:
 
-1. **! Carefully !** lift pin 18 (TXD) and pin 29 (RXD) on the rockwell modem IC and connect wires to the lifted pins. They are needed to restore modem functionality if needed.
+1. **! Carefully !** lift pin 18 (TXD) and pin 29 (RXD) on the rockwell modem IC and connect wires to the lifted pins. They are needed to restore modem functionality.
 
     ![fs_001](https://user-images.githubusercontent.com/37120278/200299754-c1e4fe74-9bf8-4724-8336-9760c4eb45da.png)
 
@@ -12,7 +12,7 @@
 
     ![fs_003](https://user-images.githubusercontent.com/37120278/200306359-3723e15f-45fd-48b5-a921-eca58cbf037e.png)
 
-4. Connect a wire for example on the battery ground pad.
+4. Connect a wire on the battery ground pad.
 
     ![fs_004](https://user-images.githubusercontent.com/37120278/200307764-e92c061d-0d47-47a8-83b1-b7d7cec75c6d.png)
 
