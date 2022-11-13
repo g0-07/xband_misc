@@ -30,9 +30,7 @@ To compile XBAND-OS you need to build the ROMDB and the ROM in two separate step
 
 ## Compile Madden 95, MK, MK2, NHL95 and RR3 patches
 
-- Open MPW Shell
-
-- Select patch to compile in the menu
+- Open MPW Shell and select the patch to compile in the menu
 
    ![image](https://user-images.githubusercontent.com/37120278/201548091-f4e272dc-9fc4-42f8-b6e8-11577ab565c3.png)
 
