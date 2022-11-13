@@ -1,6 +1,10 @@
 # XBAND Development System
 
-- Resolution and magnification can be set in *"BasiliskII_prefs"*
+- There are two development systems available:
+   - System 7: Compiles XBAND-OS and Madden 95, MK, MK2, NHL95 and RR3 patches
+   - DOS: Compiles NBA Jam and SSF2 patches
+   
+- Resolution and magnification can be set in *"BasiliskII_prefs"* and *"dosbox-x.conf"*
 
 ## Compile XBAND-OS
 
@@ -14,7 +18,7 @@ To compile XBAND-OS you need to build the ROMDB and the ROM in two separate step
 
    <img src="https://user-images.githubusercontent.com/37120278/200578373-6a7806bd-c704-4fb2-8592-ac5608629d3f.png" width=50% height=50%>
 
-## FredSerial
+## Compile XBAND-OS with FredSerial
 
 - Copy *"FredSerial.c"* and *"FredSerialPriv.h"* to the *"Sega1.0/Comm"* Folder
 
@@ -23,3 +27,17 @@ To compile XBAND-OS you need to build the ROMDB and the ROM in two separate step
 - In Think C project *"SEGA.ROM.π"* remove *"PModem.c"* from segment 8 and add *"FredSerial.c"* instead
 
 - Compile as described above
+
+## Compile Madden 95, MK, MK2, NHL95 and RR3 patches
+
+- Open MPW Shell
+
+- Select patch to compile in the menu
+
+   ![image](https://user-images.githubusercontent.com/37120278/201548091-f4e272dc-9fc4-42f8-b6e8-11577ab565c3.png)
+
+## Compile NBA Jam and SSF2 patches
+
+- Switch to the patch directory and run the build-batchfile
+
+   ![image](https://user-images.githubusercontent.com/37120278/201548323-138efdf0-2d66-457f-9f10-adb81ce9240e.png)
