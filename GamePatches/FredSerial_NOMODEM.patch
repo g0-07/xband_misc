@@ -1,0 +1,78 @@
+--- Jams\jams2f.68k.orig	2022-11-18 22:46:59.426202100 +0100
++++ Jams\jams2f.68k	2022-11-18 23:12:18.964967900 +0100
+@@ -227,6 +227,7 @@
+ 
+ ; Defines
+ 
++noModem			equ		1
+ ;newJams			equ		0	; 1 = new Jams, 0 = old Jams
+ 
+ 	if newJams
+@@ -3671,7 +3672,7 @@
+ rxThreeBytes
+ 		move.l	a1,-(sp)
+ 
+-			
++	ifeq noModem
+ 			; check modem RLSD && EQM
+ 			lea		kDefaultInternal,a4
+ 
+@@ -3689,6 +3690,7 @@
+ 			move.w	#kLineNoiseErr,d6
+ 			bra		@returnData
+ 	endif
++	endif
+ 
+ @checkdata
+ 			tst.b	rxHoldOff\Var\
+--- MK2\mk2.a.orig	2022-11-18 21:21:06.183931600 +0100
++++ MK2\mk2.a	2022-11-18 22:34:52.404940600 +0100
+@@ -1,6 +1,7 @@
+ statusbits:	equ	$3bc0fb
+ 
+ DEBUG:	equ	0
++NOMODEM:	equ	1
+ 
+ 	ifne	DEBUG
+ 
+@@ -2350,6 +2351,7 @@
+ rxThreeBytes:
+ 	moveq	#0,d6
+ 	move.l	a1,-(a7)
++	ifeq	NOMODEM
+ 	; check modem RLSD && EQM
+ 	move.l	internals(pc),a4
+ 	move.b	#$52,kModem+$1c*2+1(a4)	; stuff XADD
+@@ -2361,6 +2363,7 @@
+ .noiseerror:
+ 	move	#kLineNoiseErr,d6
+ 	bra.s	.returnData
++	endc
+ 
+ .checkdata:
+ 	bsr.s	rxAsync	; always put bytes in rxPipe, cnt in d1, err in d6
+--- SSF2\ssf2.a.orig	2022-11-14 13:34:51.822326700 +0100
++++ SSF2\ssf2.a	2022-11-18 22:28:43.235530800 +0100
+@@ -1,5 +1,6 @@
+ ;SACBRLDU
+ DEBUG:	equ	0
++NOMODEM:	equ	1
+ 
+ GAMESPEED:	equ	3	;range from 0 to 4, change if players complain...
+ GAMEMODE:	equ	1	;which mode to go into, 0-5 (0=super, 1=VS, etc.), be careful changing...
+@@ -2323,6 +2324,7 @@
+ rxThreeBytes:
+ 	moveq	#0,d6
+ 	move.l	a1,-(a7)
++	ifeq	NOMODEM
+ 	; check modem RLSD && EQM
+ 	move.l	internals(pc),a4
+ 	move.b	#$52,kModem+$1c*2+1(a4)	; stuff XADD
+@@ -2334,6 +2336,7 @@
+ .noiseerror:
+ 	move	#kLineNoiseErr,d6
+ 	bra.s	.returnData
++	endc
+ 
+ .checkdata:
+ 	bsr.s	rxAsync	; always put bytes in rxPipe, cnt in d1, err in d6
