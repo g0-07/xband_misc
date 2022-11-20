@@ -2,7 +2,7 @@
 
 - There are two development systems available:
    - System 7: Compiles XBAND-OS and assembles Madden 95, MK, MK2, NHL95 and RR3 patches
-   - DOS: Assembles NBA Jam, SSF2 and generic shell patches
+   - DOS: Assembles MK2, NBA Jam, SSF2 and generic shell patches
    
 - Resolution and magnification can be set in *"BasiliskII_prefs"* and *"dosbox-x.conf"*
 
@@ -34,7 +34,7 @@ To compile XBAND-OS you need to build the ROMDB and the ROM in two separate step
 
    ![image](https://user-images.githubusercontent.com/37120278/201548091-f4e272dc-9fc4-42f8-b6e8-11577ab565c3.png)
 
-## Build NBA Jam, SSF2 and generic shell patches
+## Build MK2, NBA Jam, SSF2 and generic shell patches
 
 - Switch to the patch directory and run the build-batchfile
 
